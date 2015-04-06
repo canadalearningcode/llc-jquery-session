@@ -11,9 +11,9 @@
     <!-- Navigation -->
     <nav>
       <span class="logo">KG</span>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a data-scroll href="#home">Home</a>
+      <a data-scroll href="#about">About</a>
+      <a data-scroll href="#contact">Contact</a>
     </nav>
     
     <!-- Header -->
@@ -69,6 +69,7 @@
       </div>
     </footer>
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
     <script>
       $(document).ready(function(){
 
@@ -76,6 +77,12 @@
           //console.log("It works!");
           $(".active").removeClass("active");
           $(this).addClass("active");
+        });
+
+        //Initialize Smooth Scroll
+        smoothScroll.init({
+          speed: 1000, // Integer. How fast to complete the scroll in milliseconds
+          easing: 'easeInOutCubic' // Easing pattern to use
         });
 
       });
