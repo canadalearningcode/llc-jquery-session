@@ -1,6 +1,6 @@
 #Ladies Learning Code
 
-##APIs: Intro to jQuery
+##Intro to jQuery
 
 1.5hr introductory workshop
 
