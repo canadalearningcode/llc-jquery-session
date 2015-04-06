@@ -78,7 +78,7 @@
 
         jQuery is a cross-browser JavaScript library designed to simplify your program. Though it has its own syntax, it is still JavaScript at its core so it still incorporates traditional JavaScript principles.
 
-        The structure and syntax of JavaScript is more complex than either HTML or CSS because neither HTML nor CSS are full fledged programming languages. 
+        The structure and syntax of JavaScript is more complex than either HTML or CSS because it&#39;s a programming language. Learning some JavaScript basics first will help to make sense of how jQuery works. 
 
         Before we get into the nitty-gritty details, let’s take a quick look at a tool called the console.
       </script>
@@ -88,7 +88,7 @@
       <script type="text/template">
         ##THE CONSOLE
 
-        The console is an interactive browser tool used to interact directly with a web page, log diagnostic information and check for errors and test your code. The console in Chrome looks like this:
+        The console is an interactive browser tool used to interact directly with a web page, log diagnostic information, check for errors and test your code. The console in Chrome looks like this:
 
         ![](framework/img/workshop/console.png)
 
@@ -105,7 +105,9 @@
       <script type="text/template">
         ##Console Exercise
 
-        Let&#39;s experiment with typing some input into the console. Return to **index.html** and open the console. After the `>` symbol, type your favorite number and press the enter/return key.  The command you input into the console gets evaluated and a value is returned back to you. You will see something like this:
+        Experiment with typing some input into the console. Return to **index.html** and open the console. 
+
+        After the `>` symbol, type your favorite number and press the enter/return key.  The command you input into the console gets evaluated and a value is returned back to you. You will see something like this:
 
         ```
         > 30
@@ -128,7 +130,7 @@
       <script type="text/template">
         ##Intro to Functions
 
-        Learning some JavaScript basics first will help to make sense of how jQuery works. 
+        
 
         Functions are used to execute a repetitive set of instructions.  There are functions built into the language but you can also create your own.
 
@@ -160,6 +162,21 @@
         Whatever value you put within the parentheses will get passed into the function.
       </script>
     </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Variables
+
+        Variables are used to store values. It&#39;s like a box; put something in it to store and take it out when you&#39;re ready to use it.  Declare variables with the keyword `var` and a name of your choosing and *assign* a value.
+
+        ```javascript
+        var favDay = "Saturday";
+        alert(favDay);
+        ```
+
+        Try it out in the console.  What do you think the alert message will be?
+      </script>
+    </section>  
 
     <section class="slide" data-markdown>
       <script type="text/template">
@@ -218,7 +235,7 @@
 
         The ```$();``` function takes a single value: a string containing either a CSS selector or HTML element indicating what item(s) on the page to select.
 
-        In the example below, this will select all the paragraphs on the page.
+        The example below selects all the paragraphs on the page. It is contained in quotes because it is a string.
 
         ```javascript
         $("p");
@@ -228,7 +245,6 @@
         ```javascript
         $(".about");
         ```
-
         What element will be selected in this example below? <span class="delayed footnote">Only paragraphs nested inside an element with a class of "about".</span>
 
         ```javascript
@@ -236,6 +252,8 @@
         ```
       </script>
     </section>
+
+
     
     <section class="slide" data-markdown>
       <script type="text/template">
@@ -245,7 +263,7 @@
 
         Let&#39;s practice using jQuery with the `.css()` method.  
 
-        According to the [documentation](http://api.jquery.com/css/), this method can be used to alter the look of the selected elements passing two *parameters*: the CSS property you want to edit and the new value of that property.
+        According to the [documentation](http://api.jquery.com/css/), this method can be used to alter the look of the selected elements by passing two *parameters*: the CSS property you want to edit and the new value of that property.
 
         ```
         $("p").css("color", "red");
@@ -254,7 +272,6 @@
         1. In the example above, what element is being selected? <span class="delayed">paragraph</span>
         1. What CSS property is being edited? <span class="delayed">color</span>
         1. What is value of the property? <span class="delayed">color is set to red</span>
-
       </script>
     </section>
     
@@ -270,7 +287,7 @@
           // code to execute here
         });
         ```
-        Document Ready is a little bit of a complex idea and has a lot of syntax to get used to. Just know that it's **required** to make the jQuery code work properly. It only needs to be included once and add all you jQuery code in between the curly brackets `{}`. Read more about it [here](http://learn.jquery.com/using-jquery-core/document-ready/).
+        Document Ready is a bit of a complex idea and has a lot of syntax to get used to. Just know that it's **required** to make the jQuery code work properly. It only needs to be included once and add all the jQuery code in between the curly brackets `{}`. Read more about it [here](http://learn.jquery.com/using-jquery-core/document-ready/).
 
         ```
         $(document).ready(function(){
@@ -322,14 +339,14 @@
 
       <p><a href="http://jquery.com/download/">Download the latest version of jQuery</a> and save it within your projects files.<br><span class="footnote">It’s common to create a separate <strong>js</strong> folder for all JavaScript files for organization, just like the images and css folders.</span></p>
 
-      <p>Just like option 1, use the <code>&lt;script&gt;</code> tag to reference the file but in the <code>src</code>, link to where the file is saved in your directory.</p>
+      <p>Just like option 1, use the <code>&lt;script&gt;</code> tag to reference the file but in the <code>src</code>, link to where the file is saved in your directory and the exact file name.</p>
 
        <pre><code class="xml">&lt;script src="js/jquery-1.11.2.min.js">&lt;/script></code></pre>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Practice! (10mins) - 40mins
+        ##Practice! (10mins)
 
         Open up **index.html**.
 
@@ -352,8 +369,6 @@
 
   });
 </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre>
-
-
       </script>
     </section>
 
@@ -361,36 +376,39 @@
       <script type="text/template">
         ##Click Events
 
-        We just set the CSS of an element with jQuery but... we have CSS to do that too!
+        We just set the CSS of an element with jQuery but... we have CSS to do that!
 
         Let's try something only JavaScript could help us with, the **click event**.
 
-        Unlike the previous example, a click event is triggered only when a selected item is clicked. Instead of the browser running the event right away, it only runs when an item is clicked by the user.
+        Instead of the browser running the event right away, a click event is triggered only when a selected item is clicked by the user.
 
         We'll be going through an example together but you can also view the documentation here: [http://api.jquery.com/click/](http://api.jquery.com/click/)
       </script>
     </section>
 
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        ##Active menu
+    <section class="slide">
+      <h2>Active menu</h2>
+      
+      <p>Here's an example of the navigation effect we are going to create.</p>
+      <p data-height="175" data-theme-id="0" data-slug-hash="XJwKBb" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/XJwKBb/'>XJwKBb</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+      <script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
+      <p>Here's what we’re going to do:</p>
 
-        Add finished example here.
+      <ol>
+        <li>Select the elements to be clicked.</li>
+        <li>Add a class of “active” to the linked that was clicked to invoke a new style.</li>
+        <li>Add the “active” class style to the CSS file.</li>
+        <li>When the user clicks on another menu item, add the “active” class to the new item and remove the active class from non-active items.</li>
+      </ol>
 
-        Here&#39;s what we're going to do:
-
-        1. Select the elements to be clicked.
-        1. Add a class of "active" to the linked that was clicked to invoke a new style.
-        1. Add the "active" class style to the CSS file.
-        1. When the user clicks on another menu item, add the "active" class to the new item and remove the active class from non-active items.
-
-        Let's get started.
-      </script>
+      <p>Let’s get started.</p>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
         ##Active menu: Step 1 - Add the click
+
+        Open your **index.html** project file <span class="footnote">(or use the index.html included in this download&#39;s project folder).</span>
 
         Select the elements to be clicked. Here’s what the menu markup looks like:
 
@@ -403,34 +421,28 @@
         </nav>
         ```
 
-        Which selector should we use?
+        What selector should we use?
 
-        ```
-        $("nav a")
-        ```
+        <div class="delayed"><pre><code>$("nav a")</pre></code></div>
 
-        Then apply the `.click()` method.
+        <div class="delayed">
+          <p>Then apply the `.click()` method.</p>
+          <pre><code>$("nav a").click();</pre></code>
+        </div>
 
-        ```
-        $("nav a").click();
-        ```
-
-        Next, add a function to execute each time the event is triggered (the navigation is clicked).
-
-        ```
-        $("nav a").click(function(){});
-        ```
-
-        Test the click action.  Do we have the right element? Check if you see the message in your console.
-
-        ```
-        $("nav a").click(function(){
+        <div class="delayed">
+          <p>Next, add a function to execute each time the event (nav click) is triggered.</p>
+          <pre><code>$("nav a").click(function(){});</pre></code>
+        </div>
+        
+        <div class="delayed">
+          <p>Test the click.  Is it the right element? Check if you see the message in your console.</p>
+          <pre><code>$("nav a").click(function(){
           console.log("It works!");
-        });
+        });</pre></code>
+        </div>
 
-        ```
-
-        API documenation here: <!-- .element: class="footnote" --> http://api.jquery.com/click/
+        API documenation here: <!-- .element: class="delayed" --> http://api.jquery.com/click/
       </script>
     </section>
 
@@ -442,7 +454,7 @@
 
         **Only** the item that was clicked.  jQuery gives us a special variable called `this` as a helper. 
 
-        `nav a` will select **all** the matched elements, `this` will only apply to the specific image that is being clicked at that moment.
+        `nav a` will select **all** the matched elements, `this` will only apply to the specific image that is being clicked at that moment. `this` is also not a string, so no quotes are required.
 
         ```
         $("nav a").click(function(){
@@ -451,7 +463,7 @@
         });
         ```
 
-        Note that the parameter passed into `addClass` is just a string.
+        Note that the parameter passed into `addClass` is just a string with no leading period because the `addClass()` method is just expecting the class name. Click that link!
         
         Wait? Nothing happened? <!-- .element: class="delayed" -->
 
@@ -465,12 +477,16 @@
       <script type="text/template">
         ##ACTIVE MENU: Step 3 - Add the CSS
 
-        Let&#39;s make a quick switch to our CSS file and create some styles for the `.active` class.
+        Let&#39;s make a quick switch to our CSS file (`styles.css`) and create some styles for the `.active` class.  
+        If styles exist for the link (`a`) already, the active selector should be more *specific* to override it.
 
-        Try changing the background colour, font colour or both!
+        Using `a.active` means any anchor link *with* a class of active.  
+        `.active` just means any element with this class and is not specific enough.
+
+        In **styles.css**, try using the sample code below to change the background colour, font colour or both!
 
         ```
-        .active {
+        a.active {
           background: #8c9d87;
           color: #222;
         }
@@ -486,11 +502,11 @@
       <script type="text/template">
         ##ACTIVE MENU: Step 4 - Remove the class
 
-        When the user clicks on another menu item, the "active" class will be added to the new item but we need to remove the active class from non-active items. To fix this issue, remove the class *first*, then add the class to the clicked item.
+        When the user clicks on another menu item, the "active" class will be added to the new item but we need to remove the active class from item that is no longer active. To fix this issue, remove the class *first*, then add the class to the clicked item.
 
         If there is an `addClass()` method, it only makes sense there would be a `removeClass()` method right?
         
-        In this case, we won&#39;t use the `$(this)` as the selector since we are looking for any element with the active class.
+        In this case, we won&#39;t use `$(this)` as the selector since we are looking for *any* element with `active`.
         
         ```
         $("nav a").click(function(){
@@ -502,7 +518,7 @@
 
         Now test it out.  Ta da!
 
-        If the class of active is used anywhere else on the page, it will be affected by this script as well. Another option is to use a more specific selector such as <!-- .element: class="footnote" -->`$("nav a.active")`.
+        If the class of active is used anywhere else on the page, it may be affected by this script as well. But there are many options! We can also use <!-- .element: class="footnote" -->`$("nav a.active")` or `$(nav a)` as the selector.
 
         API documentation here: <!-- .element: class="footnote" --> http://api.jquery.com/removeClass/
       </script>
@@ -514,7 +530,7 @@
 
         1. [Add a smooth scroll](index.html#smoothscroll).
         2. [Add a typed text effect](index.html#typedtext)
-        3. Add a photo gallery
+        3. Add a photo gallery using a jQuery plugin. Try [Flexslider](http://www.woothemes.com/flexslider/).
       </script>
     </section>
 
