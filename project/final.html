@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ladies Learning Code HTML/CSS Workshop Project</title>
+    <link href='http://fonts.googleapis.com/css?family=Satisfy|Roboto:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/final.css">
+  </head>
+  <body>
+  
+    <!-- Navigation -->
+    <nav>
+      <span class="logo">KG</span>
+      <a data-scroll href="#home">Home</a>
+      <a data-scroll href="#about">About</a>
+      <a data-scroll href="#contact">Contact</a>
+    </nav>
+    
+    <!-- Header -->
+    <header id="home">
+      <h1>Kima Greggs</h1>
+    </header>
+    
+    <!-- About me section -->
+    <section id="about" class="about">
+      <div class="content-wrap">
+        <h1>About me</h1>
+
+        <p>My name is Shakima Greggs but my friends call me Kima. Those who don't know, better call me Detective.</p>
+
+       <p><a href="http://hbo.com/the-wire" target="_blank">Link example</a> in a paragraph and <a href="http://www.imdb.com/character/ch0020629/quotes" target="_blank">another link example</a>. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis laboriosam officia blanditiis tempora sit fugiat molestiae iusto impedit ipsa cum, asperiores laborum, esse, doloribus explicabo! Autem, distinctio provident itaque non.</p>
+        
+        <p>Another paragraph! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque maiores dolor id voluptatibus iure eum hic similique, cum impedit possimus nesciunt deleniti atque fugiat. Nesciunt in ipsum voluptatem debitis nihil!</p>
+      </div>
+    </section>
+    
+    <!-- Extras section -->
+    <section id="extras" class="extras">
+      <div class="content-wrap">
+        <h1>If I hear music, I'm gonna dance.</h1> 
+      </div>
+    </section>
+    
+    <!-- Footer & Contact info -->
+    <footer id="contact">
+      <div class="content-wrap">
+        <h1>Holla!</h1>
+        <p>Want to say hi? Email me! <a href="mailto:hello@myemail.com">hello@myemail.com</a> or get in touch with me below.</p>
+        
+        <!-- Horizontal icons example -->
+        <div class="social-horizontal">
+          <a href="https://twitter.com"><i class="fa fa-twitter" title="Twitter"></i></a>
+          <a href="http://linkedin.com"><i class="fa fa-linkedin" title="LinkedIn"></i></a>
+          <a href="http://instagram.com"><i class="fa fa-instagram" title="Instagram"></i></a>
+          <a href="http://facebook.com"><i class="fa fa-facebook" title="Facebook"></i></a>
+        </div>
+
+
+        <!-- List example -->
+        <!-- <ul class="social-list">
+          <li><a href="https://twitter.com"><i class="fa fa-twitter"></i> Twitter</a></li>
+          <li><a href="http://linkedin.com"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="http://instagram.com"><i class="fa fa-instagram"></i> Instagram</a></li>
+          <li><a href="http://facebook.com"><i class="fa fa-facebook"></i> Facebook</a></li>
+        </ul> -->
+
+
+        <p class="copyright">&#169; 2015 by kima greggs</p>
+      </div>
+    </footer>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        $("nav a").click(function(){
+          //console.log("It works!");
+          $(".active").removeClass("active");
+          $(this).addClass("active");
+        });
+
+        //Initialize Smooth Scroll
+        smoothScroll.init({
+          speed: 1000, // Integer. How fast to complete the scroll in milliseconds
+          easing: 'easeInOutCubic' // Easing pattern to use
+        });
+
+      });
+    </script>
+  </body>
+</html>

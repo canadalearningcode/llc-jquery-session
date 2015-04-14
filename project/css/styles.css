@@ -1,0 +1,142 @@
+/* GLOBAL STYLES
+-----------------*/
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  background: url(../images/6.jpg) no-repeat fixed;
+  background-size: cover;
+}
+h1 {
+  font-size: 50px;
+  font-family: 'Satisfy', cursive;
+}
+a {
+  color: #8c9d87;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+}
+
+
+/* SHARED STYLES 
+-----------------*/
+.content-wrap {
+  width: 800px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+nav,
+.about, 
+footer {
+  background: #111;
+  color: #efefef;
+}
+
+
+/* LOGO 
+-----------------*/
+.logo {
+  font-family: 'Satisfy', cursive;
+  font-size: 28px;
+  border: 2px solid #8c9d87;
+  border-radius: 50%;
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  line-height: 70px;
+  text-align: center;
+  float: left;
+  margin: 12px;
+}
+.logo:hover {
+  opacity: 0.5;
+  border-color: #000;
+}
+
+/* NAV 
+-----------------*/
+nav {
+  text-align: right;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+nav a {
+  display: inline-block;
+  padding: 35px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+/* HEADER 
+-----------------*/
+header {
+  background: url(../images/baltimore-rowhouses.jpg) no-repeat fixed;
+  background-size: cover;
+  text-align: center;
+  padding: 150px 0;
+}
+header h1 { 
+  font-size: 150px;
+}
+
+
+/* EXTRAS
+-----------------*/
+.extras h1 {
+  text-align: center;
+  font-size: 100px;
+}
+
+
+/* FOOTER/CONTACT
+-----------------*/
+footer {
+  text-align: center;
+}
+
+
+/* social links list with icon fonts */
+.social-list {
+  list-style-type: none;
+  padding: 0;
+}
+.social-list i {
+  width: 30px;
+  text-align: center;
+}
+
+/* Social links with only icon fonts */
+.social-horizontal {
+  text-align: center;
+  margin-top: 50px;
+}
+.social-horizontal a {
+  display: inline-block;
+  margin: 10px 50px;
+}
+.social-horizontal i {
+  font-size: 90px;
+}
+
+
+/* Copyright */
+.copyright {
+  margin-top: 75px;
+  font-size: 14px;
+}
+
+
